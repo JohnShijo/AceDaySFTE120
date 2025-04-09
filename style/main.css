@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #dce6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #222;
+  }
+  
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns */
+    grid-template-rows: repeat(2, 1fr);     /* 2 rows */
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .game-card {
+    background-color: #fff;
+    width: 220px;
+    height: 120px;
+    padding: 1rem;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .game-card:hover {
+    background-color: #f0f8ff;
+    transform: scale(1.05);
+    color: #0077cc;
+  }
+  
+  /* Responsive layout on smaller screens */
+  @media (max-width: 500px) {
+    .game-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  
+    .game-card {
+      width: 80%;
+    }
+  }
+  
