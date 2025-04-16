@@ -1,1 +1,77 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #resetButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 999;
+  }
 
+  #resetButton:hover {
+  background-color: #d32f2f;
+  }
+
+  .screen {
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 1rem;
+    margin: 10px 0;
+    width: 80%;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  .category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  
+  .correct { background-color: #c8e6c9; }
+  .wrong { background-color: #ffcdd2; }
+  
