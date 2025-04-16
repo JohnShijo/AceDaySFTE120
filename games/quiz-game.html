@@ -1,0 +1,36 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="screen" id="start-screen">
+    <h1>Quiz Game</h1>
+    <input type="text" id="nameInput" placeholder="Ingresa tu nombre" />
+    <button onclick="goToCategory()">START</button>
+  </div>
+
+  <div class="screen" id="category-screen" style="display: none;">
+    <h2>Hello, <span id="playerName"></span> 👋</h2>
+    <p>what type of questions do you want?</p>
+    <div class="category-list">
+      <button onclick="startGame('sports')">🏅 Sports</button>
+      <button onclick="startGame('music')">🎵 Music</button>
+      <button onclick="startGame('Programation')">💻 Programation</button>
+      <button onclick="startGame('video games')">🎮 Video Games</button>
+      <button onclick="startGame('Culture')">🌍 General Culture</button>
+    </div>
+  </div>
+
+  <div class="screen" id="quiz-screen" style="display: none;">
+    <h2 id="greeting"></h2>
+    <p id="question"></p>
+    <div id="answers" class="btn-grid"></div>
+    <button id="next-btn">next</button>
+  </div>
+
+  <script src="style.js"></script>
+</body>
+</html>
