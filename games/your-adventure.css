@@ -1,50 +1,69 @@
-body {
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    background-color: #fefae0;
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
-  }
-  #story {
-    margin-bottom: 20px;
-    font-size: 1.2em;
-  }
-  .choice-button {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #a7c957;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .choice-button:hover {
-    background-color: #6a994e;
-    color: white;
-  }
+html {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(
+    to bottom,
+    #87CEEB 50%,
+    #228B22 50%
+  );
+}
 
-  #home-button, #refresh-button {
-    position: fixed;
-    top: 10px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ffcb77;
-    cursor: pointer;
-    font-weight: bold;
-    z-index: 1000;
-  }
-  
-  #home-button:hover,
-  #refresh-button:hover {
-    background-color: #f4a261;
-    color: white;
-  }
-  
-  #home-button {
-    left: 10px;
-  }
-  
-  #refresh-button {
-    right: 10px;
-  }
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  padding-top: 80px;
+  background-color: transparent;
+}
+
+#game-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: auto;
+}
+
+#story {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.choice-button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #a7c957;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.choice-button:hover {
+  background-color: #6a994e;
+  color: white;
+}
+
+#home-button,
+#refresh-button {
+  position: fixed;
+  top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffcb77;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1000;
+}
+#home-button:hover,
+#refresh-button:hover {
+  background-color: #f4a261;
+  color: white;
+}
+#home-button { left: 10px; }
+#refresh-button { right: 10px; }
