@@ -444,14 +444,6 @@ const story = {
         { text: "Try again?", next: "start"}
       ]
     },
-    placeholder: {
-      text: "",
-      choices: [
-        { text: "", next: "" },
-        { text: "", next: ""}
-      ]
-    },
-  };
 
   const storyDiv = document.getElementById("story");
   const choicesDiv = document.getElementById("choices");
@@ -475,7 +467,7 @@ const story = {
   document.getElementById("home-button").addEventListener("click", () => {
     const confirmHome = confirm("Are you sure you want to return to the home page? Your progress will be lost.");
     if (confirmHome) {
-      window.location.href = "index.html";
+      window.location.href = "https://johnshijo.github.io/AceDaySFTE120/index.html";
     }
   });
   
