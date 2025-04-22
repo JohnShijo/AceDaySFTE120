@@ -7,7 +7,7 @@ const story = {
       ]
     },
     farmEnd: {
-      text: "You push the thoughts aside, the animals need feeding, the land needs tilling, cows milked, sheep sheered. After a long, hard day of work, you head back to your bed and are too tired to do anything else. Was there something you forgot? Eh, it probably doesn't matter. Same thing tomorrow, right?",
+      text: "You push the thoughts aside, the animals need feeding, the land needs tilling, cows milked, sheep sheared. After a long, hard day of work, you head back to your bed and are too tired to do anything else. Was there something you forgot? Eh, it probably doesn't matter. Same thing tomorrow, right?",
       choices: [
         { text: "Time to sleep, ready for the next day?", next: "start" },
       ]
@@ -91,7 +91,7 @@ const story = {
     appleThief: {
       text: "You carefully sneak back behind the dryad and pluck a few apples. You notice two things: First, that there is a small knife, likely used for cooking, on the ground. And secondly, as you look over the dryad's shoulder, you see that she has a pamphlet. A pamphlet with Yug Dab's symbol on it, detailing how to resurrect him and where to join his cause. With several apples in your possesion, you think about what to do now.",
       choices: [
-        { text: "Leave quietly with your apples", next: "cave" },
+        { text: "Leave quietly with your apples", next: "tower" },
         { text: "Take the knife and end the threat", next: "dryadMurder"}
       ]
     },
@@ -444,11 +444,210 @@ const story = {
         { text: "Try again?", next: "start"}
       ]
     },
-    placeholder: {
-      text: "",
+    logSwordGoblin: {
+      text: "You follow the goblin sneakily, and he runs up to a rusted sword stuck in a log. You are dissapointed, you thought maybe it actually was something legendary. Eh, this doesn't interest you. You continue onwards.",
       choices: [
-        { text: "", next: "" },
-        { text: "", next: ""}
+        { text: "Continue", next: "rocSpot"}
+      ]
+    },
+    rocSpot: {
+      text: "You continue through the forest, and suddenly everything goes quiet. You don't know why, what do you do?",
+      choices: [
+        { text: "Take no chances and hide", next: "rocSpot2" },
+        { text: "Ignore it and continue", next: "rocBirdFood"}
+      ]
+    },
+    rocBirdFood: {
+      text: "Eh, you're sure it's nothing. You continue on until you get to a clearing. You pause to admire your surroundings, when a giant bird swoops down and digs its claws into you and lifts you off into the sky. You try to struggle out of its grasp, but you must have been acting stupid from the shock, because as you break free you realize that it took you several hundred feet off the ground. You close your eyes so you don't see the fall.",
+      choices: [
+        { text: "Try again?", next: "start"}
+      ]
+    },
+    rocSpot2: {
+      text: "You find a hiding spot and look around. As you do so, a massive shadow flies over the area. You look up and see a roc, a species of enormous bird. But this is weird, rocs normally live high in the mountains, what is it doing all the way down here?",
+      choices: [
+        { text: "Rocs? Nope, nope, NOPE! I ain't dealing with that!", next: "farmEnd" },
+        { text: "Investigate why the roc is here", next: "deepWoods"}
+      ]
+    },
+    dryad: {
+      text: "The dryad sees you and waves over. As you approach, she makes her eyes glow and she casts a spell on you. You are now under the complete mind control of the dryad.",
+      choices: [
+        { text: "Try again?", next: "start"}
+      ]
+    },
+    spiderBless: {
+      text: "You ask the spiders if you can have the sword. They look surprised that you are talking with them. They give you their blessing and you take the sword. One of the spiders say to you, \"There is a horrible cult outside, our webs are here to stop them. You are kind, not attacking us on sight. Perhaps you can defeat them? You have the spiders' blessing to do so.",
+      choices: [
+        { text: "Don't listen to them, attack the spiders", next: "cultEnd" },
+        { text: "This is the evil you were searching for!", next: "cultFight"}
+      ]
+    },
+    cultEnd: {
+      text: "You ignore them, they are clearly trying to convince you to attack some innocent people! You instead attack the spiders, and with your new silver sword it is easy. After all of the spiders are dead, you go to check on the people beyond. You see them and they appear to be in the middle of some kind of ceremony. You approach and they put a bag over your head and knock you out cold. You wake up to see you are in the middle of an occultish circle, about to be sacrificed with your own silver sword. You close your eyes as they drop the blade, slicing you open.",
+      choices: [
+        { text: "Try again?", next: "start"}
+      ]
+    },
+    cultFight: {
+      text: "You thank the spiders and leave the way they say. You approach and you see that there is indeed a cult residing here. They appear to be getting ready for a sacrifice.",
+      choices: [
+        { text: "Sneak in and take them out", next: "spiderCultWin" },
+        { text: "Charge forward and attack", next: "spiderCultLose"}
+      ]
+    },
+    spiderCultLose: {
+      text: "You charge forward, shouting a battle cry. You cut down cultist after cultist, but once the element of surprise is gone, they quickly overwhelm you, casting spells and slicing blades. You got maybe nine of them before they kill you.",
+      choices: [
+        { text: "Try again?", next: "start"}
+      ]
+    },
+    spiderCultWin: {
+      text: "You see there are too many of them to take on at once, so you sneak around instead. You feel the blessing of the spiders, hiding you from detection. You take them out one by one, until there is only the last one left, the leader. You reveal yourself as he prepares to battle you. He swings, but you parry and counterattack. Your silver blade cuts cleanly through his throat and he falls down, defeated. You have beaten the cult and saved the land from their evil! The land will hear of your valiant deeds!",
+      choices: [
+        { text: "Play again?", next: "start"}
+      ]
+    },
+    tower: {
+      text: "You haed away, not wanting to try your luck with whatever is going on. You eventually find a tower, and on top of it, a truly gargantuan bird nest. It seems this is where the roc was from.",
+      choices: [
+        { text: "Enter in", next: "tower2" },
+        { text: "Stay outside and wait", next: "towerRocLunch"}
+      ]
+    },
+    towerRocLunch: {
+      text: "You wait outside to see if anything happens, but this proves to be a mistake. As you are waiting, the roc returns and swoops down, grabbing you in its talons and bringing you up to the nest. It then lands on you, crushing you with its immense weight before swallowing you whole.",
+      choices: [
+        { text: "Try again?", next: "start"}
+      ]
+    },
+    tower2: {
+      text: "You enter into the tower, and can see there are multiple skeletons lying on the ground. One of them has a sword sticking out of it. You take it and continue upwards. Eventually you encounter a door that leads to the top. You head up and come face to face with the roc nest. There are eggs. The roc is not here.",
+      choices: [
+        { text: "Smash the eggs", next: "eggSmash" },
+        { text: "Wait for the roc", next: "tower3"}
+      ]
+    },
+    eggSmash: {
+      text: "You take your sword and smash the eggs, getting covered with nasty goo and trying to ignore the half formed birds left in the shells. You look up in horror just in time to see that the roc has returned and is very angry. It doesn't even bother to grab you. It just skewers you with its talons.",
+      choices: [
+        { text: "Try again?", next: "start"}
+      ]
+    },
+    tower3: {
+      text: "You wait for the roc to return, hiding behind the eggs and remains of past meals. Eventually it returns, and you jump out to face it. It is too big to battle, even giants have a hard time with them, so you think of something else. You take out the apples you got and offer them to the roc. It looks confused but accepts. It eats a few and tries to eat more, but you take them away and point over to the mountains. The roc seems to understand. You gie it the rest of the apples, it takes its eggs and flys off back to the mountain. You have saved the land from a giant predatory bird, good job!",
+      choices: [
+        { text: "Play again?", next: "start"}
+      ]
+    },
+    dryadMurder: {
+      text: "You take the knife and slit her throat from behind. She gurgles on the blood, but still falls over and dies. You hide as you hear some people approaching. One man comes into view and picks up the bloody knife. He looks around confused, and later some others arrive you come out of hiding.",
+      choices: [
+        { text: "Blame this stranger", next: "blame" },
+        { text: "Say you killed the dryad", next: "arrested"}
+      ]
+    },
+    arrested: {
+      text: "You admit to killing the dryad, and the group is horrified. After they collect themselves, they say you are under arrest for murder. You look around, and you can see there is no escape, they have dogs which are a lot faster than you, so you let them take you in without a hastle. They throw you in jail until your trial. No one's going to believe you area hero now.",
+      choices: [
+        { text: "Try again?", next: "start"}
+      ]
+    },
+    blame: {
+      text: "You point at the man holding the knife and the others quickly arrest him. You escape without a hitch.",
+      choices: [
+        { text: "Continue", next: "guilt"}
+      ]
+    },
+    guilt: {
+      text: "You head out and you start to feel guilty about what you've done. Should you have blamed the other man? Should you have slain that dryad? The other men seemed horrified.",
+      choices: [
+        { text: "It was for the best", next: "dragonEggs" },
+        { text: "Head back to the farm, you can't do this", next: "farmEnd"}
+      ]
+    },
+    dragonEggs: {
+      text: "You steel your resolve, you did what you had to do. You continue onwards, having taken the knife from the dryad. As you go on, you stumble across a cave, inside of which are four dragon eggs. After some investigation, you determine that these are chromatic dragon eggs, but not exactly which kind. You see several human skeletons, burned and chewed to ruin. They were wearing some form of dark clothing, but the organization is unidentifiable. The cave does not go far past the eggs.",
+      choices: [
+        { text: "Smash the eggs", next: "smashDragonEgg" },
+        { text: "Steal an egg", next: "dragonEggThiefEnd" },
+        { text: "Wait for the dragon to return", next: "dragonThankEnd"}
+      ]
+    },
+    dragonEggThiefEnd: {
+      text: "You try to pick up one of the eggs, but they are WAY heavier than you expected them to be. You hurt your back, but manage to pick one up. You start to walk out of the cave, but as soon as you turn around, you see the dragon is standing in front of the cave, and doesn't look happy. One fire breath later and you are toast.",
+      choices: [
+        { text: "Try again?", next: "start"}
+      ]
+    },
+    dragonThankEnd: {
+      text: "You wait for the dragon to return, and after a couple of minutes you hear a loud thud outside the cave. The dragon has returned. You go to greet them. The dragon sees you, and sees that you spared the eggs. The dragon thanks you handsomely with gold from its hoard. You return home with full pockets and live your life in comfort.",
+      choices: [
+        { text: "Play again?", next: "start"}
+      ]
+    },
+    smashDragonEgg: {
+      text: "You smash the eggs, knowing that they could grow up into terrible dragons. You hear a thud outside as you can tell the dragon has returned. You quickly think of a plan. You sneak by the side an ready to throw your knife at a loose rock above the dragon, and once it gets under you throw your knife and cause the rocks to fall under the dragon, letting you escape.",
+      choices: [
+        { text: "Head home", next: "I1" },
+        { text: "Continue forward", next: "her0"}
+      ]
+    },
+    I1: {
+      text: "That's not an option anymore",
+      choices: [
+        { text: "Back", next: "smashDragonEgg2"}
+      ]
+    },
+    smashDragonEgg2: {
+      text: "You smash the eggs, knowing that they could grow up into terrible dragons. You hear a thud outside as you can tell the dragon has returned. You quickly think of a plan. You sneak by the side an ready to throw your knife at a loose rock above the dragon, and once it gets under you throw your knife and cause the rocks to fall under the dragon, letting you escape.",
+      choices: [
+        { text: "Head home", next: "I2" },
+        { text: "Continue forward", next: "her0"},
+      ]
+    },
+    I2: {
+      text: "As I said, that isn't an option anymore.",
+      choices: [
+        { text: "Back", next: "smashDragonEgg3"}
+      ]
+    },
+    smashDragonEgg3: {
+      text: "You smash the eggs, knowing that they could grow up into terrible dragons. You hear a thud outside as you can tell the dragon has returned. You quickly think of a plan. You sneak by the side an ready to throw your knife at a loose rock above the dragon, and once it gets under you throw your knife and cause the rocks to fall under the dragon, letting you escape.",
+      choices: [
+        { text: "Head home", next: "I3" },
+        { text: "Continue forward", next: "her0"},
+      ]
+    },
+    I3: {
+      text: "What? You can't stand the feeling of your own sins crawling on your back?",
+      choices: [
+        { text: "I don't want this option", next: "I4" },
+        { text: "Back", next: "smashDragonEgg3"}
+      ]
+    },
+    I4: {
+      text: "Since when did you think you were in control?",
+      choices: [
+        { text: "Back", next: "smashDragonEgg3"}
+      ]
+    },
+    her0: {
+      text: "You continue, the weight of your sins weighing you down. You stop to rest, and a young adventurer comes up to you, with hope and innocence in their eyes. The same innocence that was in your eyes once. They come up and draw their blade. They say, \"I heard the kingdom was in trouble, I came to stop you.\"",
+      choices: [
+        { text: "Again?", next: "start"}
+      ]
+    },
+    logSword: {
+      text: "You thank the goblin and head to the spot he told you. You see an old, rusted sword in the log, stuck and forgotten. You go up to it and ready your hands around the handle. You pull with all your might, and the blade springs free! You feel very heroic! Unfortunately, you cut yourself on the rusty blade and have to go back home to clean the wound so you don't get tetanus. However, once it heals, you will be a great hero, I'm sure of it!",
+      choices: [
+        { text: "Play Again?", next: "start"}
+      ]
+    },
+    slipslide: {
+      text: "You walk, but you end up slipping on some mud! You tumble down and stop at the bottom of a muddy slip and slide. You are very hurt, you think you may have broken bones. You decide to wait here until the pain is more bearable, then to head back home to tend to your wounds. You've done good, now it is time to rest.",
+      choices: [
+        { text: "Play again?", next: "start"}
       ]
     },
   };
