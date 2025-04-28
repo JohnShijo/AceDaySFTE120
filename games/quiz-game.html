@@ -1,36 +1,86 @@
 <html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quiz Game</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Combined Game Quiz</title>
 </head>
 <body>
-  <div class="screen" id="start-screen">
-    <h1>Quiz Game</h1>
-    <input type="text" id="nameInput" placeholder="Ingresa tu nombre" />
-    <button onclick="goToCategory()">START</button>
-  </div>
+    <div class="container">
+        <section id="index">
+            <header>
+                <h1>Welcome to the Quiz</h1>
+            </header>
+            <main>
+                <h2>Welcome!</h2>
+                <p>Log in your name to play</p>
+                <label for="input-name">Name:</label>
+                <input type="text" id="input-name" required>
+                <button class="btn" id="start" aria-label="Start the quiz">Start</button>
+            </main>
+        </section>
 
-  <div class="screen" id="category-screen" style="display: none;">
-    <h2>Hello, <span id="playerName"></span> 👋</h2>
-    <p>what type of questions do you want?</p>
-    <div class="category-list">
-      <button onclick="startGame('sports')">🏅 Sports</button>
-      <button onclick="startGame('music')">🎵 Music</button>
-      <button onclick="startGame('Programation')">💻 Programation</button>
-      <button onclick="startGame('video games')">🎮 Video Games</button>
-      <button onclick="startGame('Culture')">🌍 General Culture</button>
+        <section id="menu" style="display: none;">
+            <header>
+                <h1>Menu</h1>
+            </header>
+            <main>
+                <h2>Hello <span id="name-player">Player</span></h2>
+                <p>Choose a category:</p>
+                <div class="categories">
+                    <div class="category" id="general">General</div>
+                    <div class="category" id="music">Music</div>
+                    <div class="category" id="movies">Movies</div>
+                    <div class="category" id="sports">Sports</div>
+                    <div class="category" id="programming">Programming</div>
+                    <div class="category" id="games">Games</div>
+                    <img src="img/auris.png" alt="Auris Icon" class="img">
+                    <img src="img/puntos.png" alt="Points Icon">
+                    <img src="img/user.png" alt="User Icon">
+                    <img src="img/general.png" alt="General Category" class="photo-category">
+                    <img src="img/musica.png" alt="Music Category" class="photo-category">
+                    <img src="img/peliculas.png" alt="Movies Category" class="photo-category">
+                    <img src="img/deportes.png" alt="Sports Category" class="photo-category">
+                    <img src="img/programacion.png" alt="Programming Category" class="photo-category">
+                    <img src="img/juegos.png" alt="Games Category" class="photo-category">
+                </div>
+            </main>
+        </section>
+
+        <section id="game" style="display: none;">
+            <header>
+                <h1>Game</h1>
+            </header>
+            <main>
+                <div class="question">
+                    <span id="num-question">1</span> / <span id="total-questions">5</span>
+                    <p id="txt-question">Question text here</p>
+                </div>
+                <div class="options">
+                    <button id="a" aria-label="Option A">Option A</button>
+                    <button id="b" aria-label="Option B">Option B</button>
+                    <button id="c" aria-label="Option C">Option C</button>
+                    <button id="d" aria-label="Option D">Option D</button>
+                </div>
+                <button id="next">Next</button>
+            </main>
+        </section>
+
+        <section id="final" style="display: none;">
+            <header>
+                <h1>Final</h1>
+            </header>
+            <main>
+                <h2>Quiz Finalized</h2>
+                <p>Score: <span id="score-final">0</span></p>
+                <p>Correct: <span id="total-correct">0</span></p>
+                <p>Incorrect: <span id="total-incorrect">0</span></p>
+                <button id="restart">Restart</button>
+            </main>
+        </section>
     </div>
-  </div>
 
-  <div class="screen" id="quiz-screen" style="display: none;">
-    <h2 id="greeting"></h2>
-    <p id="question"></p>
-    <div id="answers" class="btn-grid"></div>
-    <button id="next-btn">next</button>
-  </div>
-
-  <script src="style.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
