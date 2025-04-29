@@ -1,86 +1,262 @@
-<html>
+// index.html
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Combined Game Quiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Quiz | Start</title>
+  <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    <div class="container">
-        <section id="index">
-            <header>
-                <h1>Welcome to the Quiz</h1>
-            </header>
-            <main>
-                <h2>Welcome!</h2>
-                <p>Log in your name to play</p>
-                <label for="input-name">Name:</label>
-                <input type="text" id="input-name" required>
-                <button class="btn" id="start" aria-label="Start the quiz">Start</button>
-            </main>
-        </section>
+  <div class="container">
 
-        <section id="menu" style="display: none;">
-            <header>
-                <h1>Menu</h1>
-            </header>
-            <main>
-                <h2>Hello <span id="name-player">Player</span></h2>
-                <p>Choose a category:</p>
-                <div class="categories">
-                    <div class="category" id="general">General</div>
-                    <div class="category" id="music">Music</div>
-                    <div class="category" id="movies">Movies</div>
-                    <div class="category" id="sports">Sports</div>
-                    <div class="category" id="programming">Programming</div>
-                    <div class="category" id="games">Games</div>
-                    <img src="img/auris.png" alt="Auris Icon" class="img">
-                    <img src="img/puntos.png" alt="Points Icon">
-                    <img src="img/user.png" alt="User Icon">
-                    <img src="img/general.png" alt="General Category" class="photo-category">
-                    <img src="img/musica.png" alt="Music Category" class="photo-category">
-                    <img src="img/peliculas.png" alt="Movies Category" class="photo-category">
-                    <img src="img/deportes.png" alt="Sports Category" class="photo-category">
-                    <img src="img/programacion.png" alt="Programming Category" class="photo-category">
-                    <img src="img/juegos.png" alt="Games Category" class="photo-category">
-                </div>
-            </main>
-        </section>
+    <!-- Header -->
+    <header class="header">
+      <div class="score">
+        <img src="../img/puntos.png" alt="Points Icon">
+        <span class="points" id="points">0</span>
+      </div>
 
-        <section id="game" style="display: none;">
-            <header>
-                <h1>Game</h1>
-            </header>
-            <main>
-                <div class="question">
-                    <span id="num-question">1</span> / <span id="total-questions">5</span>
-                    <p id="txt-question">Question text here</p>
-                </div>
-                <div class="options">
-                    <button id="a" aria-label="Option A">Option A</button>
-                    <button id="b" aria-label="Option B">Option B</button>
-                    <button id="c" aria-label="Option C">Option C</button>
-                    <button id="d" aria-label="Option D">Option D</button>
-                </div>
-                <button id="next">Next</button>
-            </main>
-        </section>
+      <h1>QUIZ</h1>
 
-        <section id="final" style="display: none;">
-            <header>
-                <h1>Final</h1>
-            </header>
-            <main>
-                <h2>Quiz Finalized</h2>
-                <p>Score: <span id="score-final">0</span></p>
-                <p>Correct: <span id="total-correct">0</span></p>
-                <p>Incorrect: <span id="total-incorrect">0</span></p>
-                <button id="restart">Restart</button>
-            </main>
-        </section>
-    </div>
+      <div class="player">
+        <span class="name" id="name">-</span>
+        <img src="../img/user.png" alt="User Icon">
+      </div>
+    </header>
 
-    <script src="script.js"></script>
+    <!-- Main content -->
+    <main class="start-section">
+      <h2>Welcome!</h2>
+      <p>Enter your name to start playing</p>
+
+      <form id="start-form">
+        <label for="input-name">Name:</label>
+        <input type="text" id="input-name" placeholder="Enter your name" required>
+        <button type="submit" class="btn" id="start">Start</button>
+      </form>
+    </main>
+  </div>
+  <div class="navigation-buttons">
+    <button id="btn-home">Home</button>
+    <button id="btn-reset-progress">Restart</button>
+  </div>
+
+  <script src="../script/index.js"></script>
+</body>
+</html>
+
+
+
+//    menu.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Quiz | Menu</title>
+  <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="score">
+        <img src="../img/puntos.png" alt="Score Icon">
+        <span class="points" id="points">0</span>
+      </div>
+
+      <h1>QUIZ</h1>
+
+      <div class="player">
+        <span class="name" id="name">Pedro</span>
+        <img src="../img/user.png" alt="User Icon">
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="menu">
+      <section class="welcome">
+        <h2>Hello, <span id="name-player">Pedro</span>!</h2>
+        <p>Choose a category to begin:</p>
+      </section>
+
+      <section class="categories">
+        <div class="category" id="general">
+          <img src="../img/general.png" alt="General Knowledge" class="photo-category">
+          <h3>General</h3>
+        </div>
+
+        <div class="category" id="music">
+          <img src="../img/musica.png" alt="Music" class="photo-category">
+          <h3>Music</h3>
+        </div>
+
+        <div class="category" id="movies">
+          <img src="../img/peliculas.png" alt="Movies" class="photo-category">
+          <h3>Movies</h3>
+        </div>
+
+        <div class="category" id="sports">
+          <img src="../img/deportes.png" alt="Sports" class="photo-category">
+          <h3>Sports</h3>
+        </div>
+
+        <div class="category" id="programming">
+          <img src="../img/programacion.png" alt="Programming" class="photo-category">
+          <h3>Programming</h3>
+        </div>
+
+        <div class="category" id="games">
+          <img src="../img/juegos.png" alt="Video Games" class="photo-category">
+          <h3>Video Games</h3>
+        </div>
+      </section>
+    </main>
+
+  </div>
+  <div class="navigation-buttons">
+    <button id="btn-home">Home</button>
+    <button id="btn-reset-progress">Restart</button>
+  </div>
+
+  <script src="../script/menu.js"></script>
+</body>
+</html>
+
+// game.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Quiz | Play</title>
+  <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="score">
+        <img src="../img/puntos.png" alt="Points Icon">
+        <span class="points" id="points">0</span>
+      </div>
+
+      <h1>QUIZ</h1>
+
+      <div class="player">
+        <span class="name" id="name">Pedro</span>
+        <img src="../img/user.png" alt="User Icon">
+      </div>
+    </header>
+
+    <!-- Main Game Content -->
+    <main class="game-section">
+
+      <!-- Question Counter -->
+      <div class="question-counter">
+        <span id="num-question" class="current-question">01</span> / 
+        <span id="total-questions">5</span>
+      </div>
+
+      <!-- Current Question Text -->
+      <p id="txt-question" class="question-text">
+        Question text goes here...
+      </p>
+
+      <!-- Options Buttons -->
+      <div class="options" id="options">
+        <button class="option" id="a" aria-label="Option A">Option A</button>
+        <button class="option" id="b" aria-label="Option B">Option B</button>
+        <button class="option" id="c" aria-label="Option C">Option C</button>
+        <button class="option" id="d" aria-label="Option D">Option D</button>
+      </div>
+
+      <!-- Next Question Button -->
+      <button class="btn next-btn" id="next">Next</button>
+
+    </main>
+
+  </div>
+  <div class="navigation-buttons">
+    <button id="btn-home">Home</button>
+    <button id="btn-reset-progress">Restart</button>
+  </div>
+
+  <script src="../script/game.js"></script>
+</body>
+</html>
+
+
+
+//   final.html
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Quiz | Final Results</title>
+  <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="score">
+        <img src="../img/puntos.png" alt="Points Icon">
+        <span class="points" id="points">0</span>
+      </div>
+
+      <h1>QUIZ</h1>
+
+      <div class="player">
+        <span class="name" id="name">Pedro</span>
+        <img src="../img/user.png" alt="User Icon">
+      </div>
+    </header>
+
+    <!-- Final Results Section -->
+    <main class="final-results">
+
+      <!-- Finalized Quiz Message -->
+      <h2 class="final-title">QUIZ FINALIZED</h2>
+
+      <!-- Medal Section -->
+      <div class="medal">
+        <img src="../img/medalla.png" alt="Medal Icon" class="medal-img">
+        <h3 id="name-player" class="player-name">Alberto</h3>
+      </div>
+
+      <!-- Final Score Display -->
+      <span id="score-final" class="final-score">10,000 Points</span>
+
+      <!-- Correct/Incorrect Answers -->
+      <div class="results-summary">
+        <h2>Correct Answers: <span id="total-correct" class="final-score">20</span></h2>
+        <h2>Incorrect Answers: <span id="total-no-correct" class="final-score">5</span></h2>
+      </div>
+
+      <!-- Restart Button -->
+      <button class="btn restart-btn" id="btn-start">Start Again</button>
+
+    </main>
+
+  </div>
+  <div class="navigation-buttons">
+    <button id="btn-home">Home</button>
+    <button id="btn-reset-progress">Restart</button>
+  </div>
+
+  <script src="../script/final.js"></script>
+
 </body>
 </html>
