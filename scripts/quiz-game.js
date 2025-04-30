@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function redirectToMenu() {
-        location.href = "../games/menu.html";
+        location.href = "../games/quiz-game.html";
     }
     //botones de inicio y reinicio
     const btnHome = document.getElementById("btn-home");
@@ -46,13 +46,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (btnHome) {
         btnHome.addEventListener("click", () => {
-            window.location.href = "../games/menu.html";
+            window.location.href = "index.html";
         });
     }
 
     if (btnRestart) {
         btnRestart.addEventListener("click", () => {
-            window.location.href = "../games/start.html";
+            window.location.href = "../games/quiz-game.html";
         });
     }
 });
@@ -114,7 +114,7 @@ function handleCategoryClick(event) {
 
     // Redirigir después de la animación
     setTimeout(() => {
-        window.location.href = "../games/game.html";
+        window.location.href = "../games/quiz-game.html";
     }, 800);
 }
 
@@ -142,7 +142,7 @@ const btnHome = document.getElementById("btn-home");
 
 if (btnHome) {
     btnHome.addEventListener("click", () => {
-        window.location.href = "../games/menu.html"; // o la ruta correcta que uses
+        window.location.href = "../games/quiz-game.html"; // o la ruta correcta que uses
     });
 }
 
@@ -426,7 +426,7 @@ const currentCategory = localStorage.getItem("selectedCategory") || "general";
 const categoryQuestions = questions.filter(q => q.category === currentCategory);
 if (categoryQuestions.length === 0) {
     alert("No hay preguntas disponibles para esta categoría.");
-    window.location.href = "../games/index.html";
+    window.location.href = "../games/quiz-game.html";
 }
 
 let currentQuestionIndex = 0;
@@ -494,7 +494,7 @@ nextButton.addEventListener("click", () => {
     if (currentQuestionIndex < categoryQuestions.length && currentQuestionIndex < 5) {
         loadQuestion(currentQuestionIndex);
     } else {
-        window.location.href = "../games/final.html";
+        window.location.href = "../games/quiz-game.html";
     }
 });
 
@@ -504,7 +504,7 @@ const btnResetProgress = document.getElementById("btn-reset-progress");
 
 if (btnHome) {
     btnHome.addEventListener("click", () => {
-        window.location.href = "../games/menu.html"; // O la ruta que estés usando
+        window.location.href = "../games/quiz-game.html"; // O la ruta que estés usando
     });
 }
 
@@ -578,7 +578,7 @@ function initializeFinalScreen() {
  * Reinicia el juego llevando al inicio
  */
 function restartGame() {
-    window.location.href = "../games/index.html";
+    window.location.href = "../games/quiz-game.html";
 }
 
 // ========== EVENTOS ==========
