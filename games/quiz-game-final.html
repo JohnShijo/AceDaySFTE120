@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Quiz | Final Results</title>
+  <link rel="stylesheet" href="../style/quiz-game.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="score">
+        <img src="../assets/images/puntos.png" alt="Points Icon">
+        <span class="points" id="points">0</span>
+      </div>
+
+      <h1>QUIZ</h1>
+
+      <div class="player">
+        <span class="name" id="name">Pedro</span>
+        <img src="../assets/images/user.png" alt="User Icon">
+      </div>
+    </header>
+
+    <!-- Final Results Section -->
+    <main class="final-results">
+
+      <!-- Finalized Quiz Message -->
+      <h2 class="final-title">QUIZ FINALIZED</h2>
+
+      <!-- Medal Section -->
+      <div class="medal">
+        <img src="../assets/images/medalla.png" alt="Medal Icon" class="medal-img">
+        <h3 id="name-player" class="player-name">Alberto</h3>
+      </div>
+
+      <!-- Final Score Display -->
+      <span id="score-final" class="final-score">10,000 Points</span>
+
+      <!-- Correct/Incorrect Answers -->
+      <div class="results-summary">
+        <h2>Correct Answers: <span id="total-correct" class="final-score">20</span></h2>
+        <h2>Incorrect Answers: <span id="total-no-correct" class="final-score">5</span></h2>
+      </div>
+
+      <!-- Restart Button -->
+      <button class="btn restart-btn" id="btn-start">Start Again</button>
+
+    </main>
+
+  </div>
+  <div class="navigation-buttons">
+    <button id="btn-home">Home</button>
+    <button id="btn-reset-progress">Restart</button>
+  </div>
+
+  <script src="../scripts/quiz-game-final.js"></script>
+
+</body>
+</html>
