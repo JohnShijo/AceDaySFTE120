@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Quiz | Play</title>
+  <link rel="stylesheet" href="../style/quiz-game.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="score">
+        <img src="../assets/images/puntos.png" alt="Points Icon">
+        <span class="points" id="points">0</span>
+      </div>
+
+      <h1>QUIZ</h1>
+
+      <div class="player">
+        <span class="name" id="name">Pedro</span>
+        <img src="../assets/images/user.png" alt="User Icon">
+      </div>
+    </header>
+
+    <!-- Main Game Content -->
+    <main class="game-section">
+
+      <!-- Question Counter -->
+      <div class="question-counter">
+        <span id="num-question" class="current-question">01</span> / 
+        <span id="total-questions">5</span>
+      </div>
+
+      <!-- Current Question Text -->
+      <p id="txt-question" class="question-text">
+        Question text goes here...
+      </p>
+
+      <!-- Options Buttons -->
+      <div class="options" id="options">
+        <button class="option" id="a" aria-label="Option A">Option A</button>
+        <button class="option" id="b" aria-label="Option B">Option B</button>
+        <button class="option" id="c" aria-label="Option C">Option C</button>
+        <button class="option" id="d" aria-label="Option D">Option D</button>
+      </div>
+
+      <!-- Next Question Button -->
+      <button class="btn next-btn" id="next">Next</button>
+
+    </main>
+
+  </div>
+  <div class="navigation-buttons">
+    <button id="btn-home">Home</button>
+    <button id="btn-reset-progress">Restart</button>
+  </div>
+
+  <script src="../scripts/quiz-game-game.js"></script>
+</body>
+</html>
