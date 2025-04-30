@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Quiz | Menu</title>
+  <link rel="stylesheet" href="../style/quiz-game.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="score">
+        <img src="../assets/images/puntos.png" alt="Score Icon">
+        <span class="points" id="points">0</span>
+      </div>
+
+      <h1>QUIZ</h1>
+
+      <div class="player">
+        <span class="name" id="name">Pedro</span>
+        <img src="../assets/images/user.png" alt="User Icon">
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="menu">
+      <section class="welcome">
+        <h2>Hello, <span id="name-player">Pedro</span>!</h2>
+        <p>Choose a category to begin:</p>
+      </section>
+
+      <section class="categories">
+        <div class="category" id="general">
+          <img src="../assets/images/general.png" alt="General Knowledge" class="photo-category">
+          <h3>General</h3>
+        </div>
+
+        <div class="category" id="music">
+          <img src="../assets/images/musica.png" alt="Music" class="photo-category">
+          <h3>Music</h3>
+        </div>
+
+        <div class="category" id="movies">
+          <img src="../assets/images/peliculas.png" alt="Movies" class="photo-category">
+          <h3>Movies</h3>
+        </div>
+
+        <div class="category" id="sports">
+          <img src="../assets/images/deportes.png" alt="Sports" class="photo-category">
+          <h3>Sports</h3>
+        </div>
+
+        <div class="category" id="programming">
+          <img src="../assets/images/programacion.png" alt="Programming" class="photo-category">
+          <h3>Programming</h3>
+        </div>
+
+        <div class="category" id="games">
+          <img src="../assets/images/juegos.png" alt="Video Games" class="photo-category">
+          <h3>Video Games</h3>
+        </div>
+      </section>
+    </main>
+
+  </div>
+  <div class="navigation-buttons">
+    <button id="btn-home">Home</button>
+    <button id="btn-reset-progress">Restart</button>
+  </div>
+
+  <script src="../scripts/quiz-game-menu.js"></script>
+</body>
+</html>
